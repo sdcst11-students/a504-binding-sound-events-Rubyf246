@@ -22,23 +22,37 @@ window = tk.Tk()
 window.title("my soundboard")
 window.attributes('-topmost',True)
 
-playsound("file.mp3",block=False)
+#playsound("file.mp3",block=False)
 
-def clickFunction(event):
+def dogclick(event): 
+    playsound("Dog1.wav", block = False)
+
+def catclick(event): 
+    playsound("Meow.wav", block = False)  
     
+def horseclick(event): 
+    playsound("Horse.wav", block = False)  
+
+def duckclick(event): 
+    playsound("Duck.wav", block = False)  
+
 
 dogphoto = PhotoImage(file="dog.png")
 bdog = tk.Button(window, image=dogphoto) 
+bdog.bind("<Button>",dogclick)
 
 catphoto = PhotoImage(file= "cat.png")
 bcat = tk.Button(window, image = catphoto)
+bcat.bind("<Button>",catclick)
+
 
 horsephoto = PhotoImage(file= "horse.png")
 bhorse = tk.Button(window, image = horsephoto)
+bhorse.bind("<Button>",horseclick)
 
 duckphoto = PhotoImage(file= "duck.png")
 bduck = tk.Button(window, image = duckphoto)
-
+bduck.bind("<Button>",duckclick)
 
 dog= tk.Label(window, text = "Dog")
 cat= tk.Label (window, text= "Cat")
@@ -54,19 +68,6 @@ dog.grid(row = 3, column = 1 )
 cat.grid (row = 3, column = 2)
 horse.grid (row = 3, column = 3)
 duck.grid(row= 3, column= 4)
-
-
-#owner.grid (row= 4, column = 4)
-#bd.grid (row =4, column = 5)
-#
-#ne.grid (row= 5, column = 1)
-#te.grid (row= 5, column = 2)
-#be.grid (row= 5, column = 3)
-#oe.grid (row= 5, column = 4)
-#bde.grid (row=5, column = 5)
-#
-#sbn.grid (row= 1, column=4)
-#sbne.grid(row=1, column = 5)
 
 
 window.mainloop()

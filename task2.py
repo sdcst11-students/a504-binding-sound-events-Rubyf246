@@ -19,86 +19,126 @@ Keep score for the player and play appropriate sound effects when buttons are pr
 window = tk.Tk()
 window.title("Math Drills")
 window.attributes('-topmost',True)
-eoutput = IntVar()
-eoutput.set(0)
+s = 0
+
 
 def click1(event): 
+    global s
     get1=onee.get()
     get1=float(get1)
     if get1 == 18:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click2(event): 
+    global s
     get2=twoe.get()
     get2=float(get2)
     if get2 == 5:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click3(event): 
+    global s
     get3=threee.get()
     get3=float(get3)
     if get3 == 8:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click4(event): 
+    global s
     get4=foure.get()
     get4=float(get4)
     if get4 == 6:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click5(event): 
+    global s
     get5=fivee.get()
     get5=float(get5)
     if get5 == -16:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click6(event): 
+    global s
     get6=sixe.get()
     get6=float(get6)
     if get6 == 20:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
 
 def click7(event): 
+    global s
     get7=sevene.get()
     get7=float(get7)
     if get7 == -4:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click8(event): 
+    global s
     get8=eighte.get()
     get8=float(get8)
     if get8 == 1:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click9(event): 
+    global s
     get9=ninee.get()
     get9=float(get9)
     if get9== -12:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
         
 def click10(event): 
+    global s
     get10=tene.get()
     get10=float(get10)
     if get10 == -7:
         playsound("Tada.wav", block = False)
+        s = s + 1 
+        bscore.delete(0,END)
+        bscore.insert (3,f"{s}")
     else:
         playsound("Toy Honk.wav", block = False)
 
@@ -106,7 +146,7 @@ main= tk.Label(window, text = "Problem Solve")
 sub= tk.Label (window, text= "Solving One Step Equations")
 instruct= tk.Label (window, text= "Find Missing Variables")
 score= tk.Label(window, text= "Score =")
-bscore = tk.Entry(window, width= 7, textvariable=eoutput)
+bscore = tk.Entry(window, width= 7, text= s)
 
 one= tk.Label(window, text ="1. 26 = 8 + v   =")
 two= tk.Label (window, text="2. 3 + p = 8   =")
